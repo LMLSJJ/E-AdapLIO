@@ -1,0 +1,43 @@
+<launch>
+
+    <arg name="project" default="e_adaplio"/>
+    
+    <!-- Parameters -->
+    <rosparam file="$(find e_adaplio)/config/params_kitti.yaml" command="load" />
+
+    <!--- LOAM -->
+    <include file="$(find e_adaplio)/launch/include/module_loam.launch" />
+
+    <!--- Run Rviz-->
+    <include file="$(find e_adaplio)/launch/include/module_rviz.launch" />
+
+    <!-- 运行bag文件时候，使用模拟时间-->
+    <param name="use_sim_time" value="true" />    
+
+    <!-- 设定适配KITTI雷达数据(true)，OR适配liosam给定的原数据(false),另外记得改一下params.yaml文件中的外参-->
+    <param name="KITTI_OR_SOUREC" type="bool" value="1" />
+
+    <!-- 设置角度衰减系数alpha，以及位移衰减系数beta的值 -->
+    <param name="alpha"  type="double"   value="0.7" />
+    <param name="beta"  type="double"   value="0.6" />
+
+    <!-- 设置用来计算信息熵的的网格尺寸，分为室内和室外场景（室内2.0，室外3.0） -->
+    <param name="Entropyleaf"  type="double"   value="3.0" />    
+
+    <!-- 设定是否记录时间 -->
+    <param name="EnabletimeLogging" type="bool" value="0" />      
+    <!-- 设置odometry点云匹配运行时间保存的文件路径-->
+    <param name="odometry_time_file_path"  type="string"   value="/home/sjj/data_analyse_py/data_dir/liosam_data/adaptive_lio_dir/Time_dir/building1.csv" />
+
+
+    <!-- 设定是否开启关键帧轨迹记录，调用的函数必须在PCD保存开启时候才能使用-->
+    <param name="PathSave_ON_or_OFF" type="bool" value="1" />    
+    <!-- 以TUM格式存储关键帧轨迹 -->
+    <param name="keyframes_pathfile" type="string" value="/home/sjj/data_analyse_py/data_dir/kitti/path_dir/0034_NUM02/adaptivelio_traj.txt" /> 
+    
+    <!-- 设定是否开启PCD保存-->
+    <param name="e_adaplio/savePCD" type="bool" value="1" />    
+    <!-- PCD保存路径 -->
+    <param name="e_adaplio/savePCDDirectory" type="string" value="/ROS_WS/adaptivelio_ws/src/e_adaplio/PCD/kitti/0018_NUM05/" />  
+
+</launch>

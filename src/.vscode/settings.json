@@ -1,0 +1,16 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/sjj/ROS_WS/adaptivelio_ws/devel/lib/python3/dist-packages",
+        "/home/sjj/ROS_WS/livoxliosam_ws/devel/lib/python3/dist-packages",
+        "/home/sjj/ROS_WS/test_ws/devel/lib/python3/dist-packages",
+        "/home/sjj/ROS_WS/fastlio_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/sjj/ROS_WS/adaptivelio_ws/devel/lib/python3/dist-packages",
+        "/home/sjj/ROS_WS/livoxliosam_ws/devel/lib/python3/dist-packages",
+        "/home/sjj/ROS_WS/test_ws/devel/lib/python3/dist-packages",
+        "/home/sjj/ROS_WS/fastlio_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

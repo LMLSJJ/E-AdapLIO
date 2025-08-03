@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/sjj/ROS_WS/adaptivelio_ws/devel/include/**",
+        "/home/sjj/ROS_WS/livoxliosam_ws/devel/include/**",
+        "/home/sjj/ROS_WS/test_ws/devel/include/**",
+        "/home/sjj/ROS_WS/fastlio_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/sjj/ROS_WS/adaptivelio_ws/src/e_adaplio/include/**",
+        "/home/sjj/ROS_WS/test_ws/src/A-LOAM_test/include/**",
+        "/home/sjj/ROS_WS/fastlio_ws/src/fast_lio/include/**",
+        "/home/sjj/ROS_WS/test_ws/src/fast_lio_test/include/**",
+        "/home/sjj/ROS_WS/livoxliosam_ws/src/LIO-SAM-MID360/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
